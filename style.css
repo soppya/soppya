@@ -1,98 +1,129 @@
-*{
-    padding: 0;
+/* Reset some default styles */
+* {
     margin: 0;
-    text-decoration: none;
-    list-style: none;
+    padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
+
+/* Navigation */
 nav {
+    background-color: #333;
+    color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: #0082e6;
-    height: 60px;
-    font-weight: bold;
-
+    padding: 10px 20px;
 }
 
-nav ul {
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ul {
     display: flex;
-    justify-content: space-around;
-
-}
-
-nav ul li {
     list-style: none;
-    margin: 10px;
+    margin: 0;
+    padding: 0;
 }
-nav ul li a {
+
+ul li {
+    margin-right: 15px;
+}
+
+ul li a {
+    color: white;
     text-decoration: none;
-    color: white;
-    padding: 7px 13px;
-    border-radius: 9px;
 }
 
-a.active, a:hover{
-background: #1b9bff;
-transition: 3s;
+/* Header */
+header {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 60px 0;
 }
 
-.logo{
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+.header-content h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
+
+.header-content p {
+    font-size: 18px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
 .firstsection {
-    color: rgb(26, 25, 25);
-    font-size: 3rem;
-    width: 70%; /* Adjust width for mobile */
-    margin: 100px auto 50px; /* Margin for both mobile and desktop */
-    font-weight: bold;
-    text-align: center; /* Center align for both */
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.paragraph {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 10px;
-    text-align: center; /* Center align for both */
-}
-
-.left{
+.left {
     color: #0082e6;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.card-img{
-    padding-bottom: 56.25%;
+.paragraph p {
+    font-size: 16px;
+}
+
+/* Card Section */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -10px; /* Adjust margins to create a gutter between cards */
+}
+
+.card {
+    flex-basis: calc(33.33% - 20px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Include padding in card width calculation */
+}
+
+.card-img {
+    padding-bottom: 56.25%; /* Maintain aspect ratio for card images (16:9) */
     position: relative;
+    overflow: hidden;
 }
-.card-img img{
+
+.card-img img {
     position: absolute;
-    width: 60%;
-    margin-left: 45px;
-    
+    width: 100%; /* Ensure the image fills the card */
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover entire container */
 }
-.card-body{
+
+.card-body {
     padding: 1.5rem;
 }
-.card-title{
-    font-size: 1.5rem;
-    margin-top: 50px;
-    line-height: 1.33;
-    font-weight: 700;
 
+.card-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    line-height: 1.33;
+    font-weight: bold;
 }
-.card-intro{
+
+.card-intro {
     margin-top: 0.75rem;
     line-height: 1.5;
 }
 
-
 .button {
-    background-color: #0082e6; 
+    background-color: #0082e6;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -101,29 +132,100 @@ transition: 3s;
     display: inline-block;
     font-size: 16px;
     border-radius: 15px;
-    margin-top: 5px;
-    margin-left: 70px;
-  }
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the cards */
-    margin-top: 1rem;
+    margin-top: 10px;
 }
 
-.card {
-    flex-basis: 40%; /* Adjusted width for desktop */
-    background-color: #fff;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 1rem;
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
 
-/* Media Query for Mobile */
+/* Media Queries for Responsiveness */
+
+/* Tablet */
 @media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 32px;
+    }
+
+    .header-content p {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
     .card {
-        flex-basis: 100%; /* Full width for card on mobile */
-        margin-bottom: 1rem; /* Adjusted margin for mobile view */
+        flex-basis: calc(50% - 20px);
+        margin-right: 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    input[type="checkbox"] {
+        display: none; /* Hide the checkbox on mobile */
+    }
+
+    label[for="toggle"] {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+    }
+
+    input[type="checkbox"]:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul li {
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    ul li a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .container {
+        margin: 0 -10px; /* Adjust margins to create a gutter between cards */
+    }
+
+    .card {
+        flex-basis: calc(100% - 20px);
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .card-img {
+        padding-bottom: 40%; /* Adjust aspect ratio of the card image */
+    }
+
+    .card-img img {
+        width: 100%; /* Ensure the card image takes up the full width of the container */
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    }
+
+    .button {
+        margin-left: 0; /* Adjust button margin for mobile view */
     }
 }
