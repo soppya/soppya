@@ -11,8 +11,9 @@ body {
 }
 
 /* Navigation */
+
 nav {
-    background-color: #333;
+    background-color: #0082e6;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -54,7 +55,7 @@ ul li a {
 /* Header */
 header {
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: #b1d1e9;
     padding: 60px 0;
 }
 
