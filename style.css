@@ -71,7 +71,7 @@ transition: 3s;
 }
 .card-img img{
     position: absolute;
-    width: 70%;
+    width: 60%;
     margin-left: 45px;
     
 }
@@ -107,12 +107,12 @@ transition: 3s;
   .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center; /* Center the cards */
     margin-top: 1rem;
 }
 
 .card {
-    flex-basis: calc(33.33% - 2rem); /* Adjusted width for desktop */
+    flex-basis: 40%; /* Adjusted width for desktop */
     background-color: #fff;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
     border-radius: 10px;
