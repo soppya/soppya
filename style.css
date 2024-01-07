@@ -183,6 +183,12 @@ footer {
         font-size: 24px;
         cursor: pointer;
     }
+    footer{
+        background-color: #0082e6;
+    }
+    ul{
+        background-color: #0082e6;
+    }
 
 header{
     background-color: #b1d1e9;
