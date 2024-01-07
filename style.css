@@ -186,9 +186,6 @@ footer {
     footer{
         background-color: #0082e6;
     }
-    ul{
-        background-color: #0082e6;
-    }
 
 header{
     background-color: #b1d1e9;
@@ -213,7 +210,7 @@ header{
     ul li {
         margin: 0;
         padding: 15px 0;
-    }
+        background-color: #0082e6;
 
     ul li a {
         display: block;
