@@ -148,7 +148,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #0082e6;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -184,14 +184,16 @@ footer {
         cursor: pointer;
     }
 
-
+header{
+    background-color: #b1d1e9;
+}
 
     ul {
         display: none;
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #333;
+        background-color: #0082e6;
         width: 100%;
         text-align: center;
         z-index: 1;
