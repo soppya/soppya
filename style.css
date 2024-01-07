@@ -18,7 +18,17 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
+label[for="toggle"],
+input[type="checkbox"] {
+    display: none;
+}
+
+
 
 .logo {
     font-size: 24px;
@@ -167,15 +177,13 @@ footer {
 
 /* Mobile */
 @media (max-width: 480px) {
-    input[type="checkbox"] {
-        display: none; /* Hide the checkbox on mobile */
-    }
-
     label[for="toggle"] {
         display: block;
         font-size: 24px;
         cursor: pointer;
     }
+
+
 
     ul {
         display: none;
