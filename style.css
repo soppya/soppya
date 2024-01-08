@@ -167,13 +167,28 @@ footer {
         font-size: 16px;
     }
 
-    .container {
-        flex-direction: column;
+     container {
+        margin: 0 -10px; /* Adjust margins to create a gutter between cards */
     }
 
     .card {
-        flex-basis: calc(50% - 20px);
+        flex-basis: calc(100% - 20px);
+        margin-bottom: 20px;
         margin-right: 0;
+    }
+
+    .card-img {
+        padding-bottom: 40%; /* Adjust aspect ratio of the card image */
+    }
+
+    .card-img img {
+        width: 100%; /* Ensure the card image takes up the full width of the container */
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover entire container */
+    }
+
+    .button {
+        margin-left: 0; /* Adjust button margin for mobile view */
     }
 }
 
